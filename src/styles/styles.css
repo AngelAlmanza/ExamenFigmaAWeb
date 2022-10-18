@@ -1,0 +1,106 @@
+:root {
+  --color-principal: #982DCA;
+  --color-secundario: #DC5407;
+  --color-auxiliar-uno: #FFFFFF;
+  --color-auxiliar-dos: #000000;
+  --color-logo: #D9D9D9;
+  --tamanio-titulos: 32px;
+  --tamanio-subtitulos: 24px;
+  --tamanio-texto: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--color-principal);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+header .menu-hamburguesa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  /* transition: all .5s ease; */
+}
+
+header .menu-hamburguesa__lineas {
+  width: 50px;
+  height: 6px;
+  margin: 4px auto;
+  border-radius: 4px;
+  background-color: var(--color-secundario);
+}
+
+header .contenedor-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: var(--color-logo);
+}
+
+header .contenedor-logo p {
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 black;
+}
+
+header .contenedor-logo p:nth-child(1) {
+  color: var(--color-principal);
+}
+
+header .contenedor-logo p:nth-child(2) {
+  color: var(--color-secundario);
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 200px;
+  padding: 30px 10px;
+  background-color: var(--color-principal);
+  /* box-shadow: inset 0px 4px 20px -4px black; */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.banner h1 {
+  font-size: var(--tamanio-titulos);
+  text-align: center;
+}
+
+.banner img {
+  width: 80%;
+}
+
+.descripcion {
+  padding: 20px 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.descripcion h2 {
+  font-size: var(--tamanio-subtitulos);
+  margin-bottom: 10px;
+}
+
+.descripcion p {
+  font-size: var(--tamanio-texto);
+}
+
