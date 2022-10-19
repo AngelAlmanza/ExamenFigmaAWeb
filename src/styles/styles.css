@@ -206,3 +206,22 @@ header .contenedor-logo p:nth-child(2) {
   color: var(--color-auxiliar-dos);
   background-color: var(--color-principal);
 }
+
+.elegirnos {
+  background-color: var(--color-principal);
+  padding: 20px 40px;
+  color: var(--color-auxiliar-uno);
+}
+
+.elegirnos h3 {
+  text-align: start;
+  margin-left: -20px;
+  margin-bottom: 20px;
+  font-size: var(--tamanio-subtitulos);
+  font-weight: bold;
+}
+
+.elegirnos ul li {
+  margin-bottom: 20px;
+  font-size: var(--tamanio-texto);
+}
