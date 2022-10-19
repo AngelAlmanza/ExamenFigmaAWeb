@@ -225,3 +225,43 @@ header .contenedor-logo p:nth-child(2) {
   margin-bottom: 20px;
   font-size: var(--tamanio-texto);
 }
+
+footer {
+  padding: 20px 10px;
+}
+
+footer h3 {
+  font-size: var(--tamanio-subtitulos);
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.redes-sociales {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  place-items: center;
+}
+
+.redes-sociales__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 8px;
+}
+
+.redes-sociales__item img {
+  width: 40px;
+}
+
+.redes-sociales__item p {
+  margin-left: 8px;
+  font-size: var(--tamanio-texto);
+  font-weight: bold;
+}
+
+.redes-sociales__item p a {
+  text-decoration: none;
+  color: initial;
+}
