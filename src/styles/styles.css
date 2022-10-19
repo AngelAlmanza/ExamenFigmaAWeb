@@ -132,7 +132,8 @@ header .contenedor-logo p:nth-child(2) {
   margin-top: -65px;
 }
 
-.promocion-home button {
+.promocion-home button,
+.servicios-home button {
   display: block;
   margin: 0 auto;
   padding: 10px 40px;
@@ -143,4 +144,65 @@ header .contenedor-logo p:nth-child(2) {
   font-weight: bold;
   color: var(--color-auxiliar-uno);
   background-color: var(--color-secundario);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.servicios-home {
+  padding: 40px 20px;
+}
+
+.servicios-home h3 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: var(--tamanio-subtitulos);
+}
+
+.servicios-home__contenerdor-servicios {
+  margin-bottom: 40px;
+}
+
+.servicios-home__contenerdor-servicios ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.servicios-home__contenerdor-servicios ul li {
+  width: 120px;
+  height: 200px;
+  padding: 10px;
+  list-style: none;
+}
+
+.servicios-home__contenerdor-servicios ul .servicio-vacio {
+  width: 70px;
+  background-color: var(--color-principal);
+  filter: blur(2px);
+}
+
+.servicios-home__contenerdor-servicios ul .servicio-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background-color: var(--color-secundario);
+}
+
+.servicios-home__contenerdor-servicios img[alt="Dron"] {
+  width: 90%;
+}
+
+.servicios-home__contenerdor-servicios img[alt="Paquete"] {
+  width: 80%;
+  margin-top: -10px;
+}
+
+.servicio-item p {
+  margin-top: 20px;
+}
+
+.servicios-home button {
+  color: var(--color-auxiliar-dos);
+  background-color: var(--color-principal);
 }
