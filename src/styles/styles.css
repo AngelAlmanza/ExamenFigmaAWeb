@@ -104,3 +104,43 @@ header .contenedor-logo p:nth-child(2) {
   font-size: var(--tamanio-texto);
 }
 
+.promocion-home {
+  padding: 40px 10px;
+  background-color: var(--color-principal);
+  box-shadow: inset 0px 8px 4px -4px rgba(0, 0, 0, 0.25);
+}
+
+.promocion-home .promocion-home__contenedor-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.promocion-home h2 {
+  font-size: var(--tamanio-subtitulos);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.promocion-home__contenedor-img img[alt="Dron"] {
+  width: 90%;
+}
+
+.promocion-home__contenedor-img img[alt="Descuento 25%"] {
+  width: 80%;
+  margin-top: -65px;
+}
+
+.promocion-home button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 40px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  font-size: var(--tamanio-texto);
+  font-weight: bold;
+  color: var(--color-auxiliar-uno);
+  background-color: var(--color-secundario);
+}
