@@ -269,3 +269,41 @@ footer h3 {
   text-decoration: none;
   color: initial;
 }
+
+@media (min-width: 768px) {
+  header {
+    justify-content: space-between;
+    padding: 10px 30px;
+  }
+
+  .banner img {
+    max-width: 500px;
+  }
+
+  .promocion-home__contenedor-img img[alt="Dron"] {
+    max-width: 500px;
+    margin-top: 10px;
+  }
+
+  .promocion-home__contenedor-img img[alt="Descuento 25%"] {
+    max-width: 500px;
+    margin-top: -125px;
+  }
+
+  .promocion-home button {
+    margin-top: -70px;
+  }
+
+  .servicios-home__contenerdor-servicios ul .servicio-vacio {
+    width: 120px;
+  }
+
+  .servicios-home__contenerdor-servicios ul .servicio-item {
+    width: 160px;
+    height: 240px;
+  }
+
+  footer h3 {
+    margin-left: 30px;
+  }
+}
