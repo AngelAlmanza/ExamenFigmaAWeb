@@ -15,6 +15,10 @@
   margin: 0;
 }
 
+.inactive {
+  display: none !important;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -70,6 +74,23 @@ header .contenedor-logo p:nth-child(1) {
 
 header .contenedor-logo p:nth-child(2) {
   color: var(--color-secundario);
+}
+
+.menu-header ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu-header ul li {
+  list-style: none;
+  margin-left: 10px;
+}
+
+.menu-header ul li a {
+  text-decoration: none;
+  color: var(--color-auxiliar-uno);
+  font-size: var(--tamanio-texto);
 }
 
 .banner {
@@ -306,4 +327,8 @@ footer h3 {
   footer h3 {
     margin-left: 30px;
   }
+}
+
+@media (min-width: 1024px) {
+  
 }
