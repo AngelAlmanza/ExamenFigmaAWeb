@@ -369,8 +369,33 @@ footer h3 {
 }
 
 @media (min-width: 1024px) {
-  .redes-sociales {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
+  header {
+    flex-flow: row-reverse;
+  }
+
+  header .menu-hamburguesa {
+    display: none;
+  }
+
+  .menu-header {
+    position: initial;
+    width: initial;
+    height: initial;
+    padding: 0;
+    transform: none;
+  }
+
+  .menu-header ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-header ul li {
+    margin-top: 0;
+  }
+
+  .menu-header ul li a {
+    font-size: var(--tamanio-texto);
   }
 }
