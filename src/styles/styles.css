@@ -366,6 +366,11 @@ footer h3 {
   footer h3 {
     margin-left: 30px;
   }
+
+  .redes-sociales {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
 }
 
 @media (min-width: 1024px) {
