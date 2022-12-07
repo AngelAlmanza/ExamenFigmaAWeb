@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Servicios</title>
+  {% load static %}
+	<link rel="stylesheet" href="{% static 'inicio/servicios.css' %}">
+</head>
+
+<body>
+	<header>
+    <div class="menu-contenedor">
+      <button class="menu-hamburguesa">
+        <span class="menu-hamburguesa__linea1"></span>
+        <span class="menu-hamburguesa__linea2"></span>
+        <span class="menu-hamburguesa__linea3"></span>
+      </button>
+      <div class="menu-header">
+        <ul>
+          <li><a href="{% url 'inicio' %}">Inicio</a></li>
+          <li><a href="{% url 'servicios' %}">Servicios</a></li>
+          <li><a href="{% url 'contacto' %}">Contacto</a></li>
+          <li><a href="{% url 'acercadenosotros' %}">Acerca de nosotros</a></li>
+          <li><a href="{% url 'register' %}">Iniciar Sesion</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="contenedor-logo">
+      <p>Fed</p>
+      <p>Pack</p>
+    </div>
+  </header>
+	<div id="div_blanco">
+		<img id="caja" src="{% static 'inicio/assets/img/Imagen1.png' %}">
+		<h1>Servicios</h1>
+		<h3>Tu paquete seguro a la vuelta de tu casa</h3>
+
+		<p>Con el servicio de FedPack se garantiza la seguridad de sus packetes con el mejor tiempo posible con nuestras
+			unidades </p>
+	</div>
+	<br>
+	<div id="div_morado">
+		<table align="center" style="border:none">
+			<tr style="border:none">
+				<th style="border:none">
+					<h2 id="dolar1">$</h2>
+				</th>
+				<th style="border:none">
+					<h2>Nuestra empresa cuenta con las mejores precios!!!</h2>
+				</th>
+				<th style="border:none">
+					<h2 id="dolar2">$</h2>
+				</th>
+			</tr>
+		</table>
+
+		<table align="center">
+			<tr>
+				<th>Peso(kg)</th>
+				<th>Precios x km</th>
+			</tr>
+			<tr>
+				<td>0-5</td>
+				<td>$5.00 MX</td>
+			</tr>
+			<tr>
+				<td>6-10</td>
+				<td>$10.00 MX</td>
+			</tr>
+			<tr>
+				<td>11-15</td>
+				<td>$15.00 MX</td>
+			</tr>
+			<tr>
+				<td>16-20</td>
+				<td>$20.00 MX</td>
+			</tr>
+
+		</table>
+	</div>
+
+	<div id="dronpack">
+		<h2>FedPack no solamente cuenta con una tarifa minima, tambien contamos con diferentes servicios de entrega</h2>
+		<div class="dronpack__img-container">
+			<div>
+				<img id="img2" src="{% static 'inicio/assets/img/Imagen2.png' %}" alt="Camion">
+				<p>Camión</p>
+			</div>
+			<div>
+				<img id="img3" src="{% static 'inicio/assets/img/Imagen3.png' %}" alt="dron">
+				<p>Dron</p>
+			</div>
+		</div>
+	</div>
+
+	<script src="{% static 'inicio/main.js' %}"></script>
+</body>
+
+</html>

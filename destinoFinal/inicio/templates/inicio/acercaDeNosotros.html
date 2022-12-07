@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acerca de nosotros</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'inicio/stylesAcercaNosotros.css' %}">
+</head>
+<body>
+  <header>
+    <div class="menu-contenedor">
+      <button class="menu-hamburguesa">
+        <span class="menu-hamburguesa__linea1"></span>
+        <span class="menu-hamburguesa__linea2"></span>
+        <span class="menu-hamburguesa__linea3"></span>
+      </button>
+      <div class="menu-header">
+        <ul>
+          <li><a href="{% url 'inicio' %}">Inicio</a></li>
+          <li><a href="{% url 'servicios' %}">Servicios</a></li>
+          <li><a href="{% url 'contacto' %}">Contacto</a></li>
+          <li><a href="{% url 'acercadenosotros' %}">Acerca de nosotros</a></li>
+          <li><a href="{% url 'register' %}">Iniciar Sesion</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="contenedor-logo">
+      <p>Fed</p>
+      <p>Pack</p>
+    </div>
+  </header>
+  <main>
+    <h1>Acerca de nosotros</h1>
+    <p>FedPack tu lugar preferido para enviar y recibir paquetes! :)</p>
+    <p>
+      Somos la empresa mas grande a nivel nacional en el envio y recibo de paquetes en todo mexico,
+      nuestro compromiso contigo es que puedas tener una gran seguridad y tranquilidad en que tus paquetes se envien
+      y lleguen de una forma segura y muy rapida, por eso nos esforzamos dia a dia en mejorar para que jamas podamos perder tu valiosa confianza y seguir siendo la mejor empresa en paqueteria de mexico,
+      muchas gracias por confiar en FedPack!!
+    </p>
+    <section class="main-images">
+      <div>
+        <img src="{% static 'inicio/assets/img/dron.png' %}" alt="Dron">
+      </div>
+      <div>
+        <img src="{% static 'inicio/assets/img/mexico.png' %}" alt="Bandera de México">
+      </div>
+    </section>
+    <h2>Siguenos en nuestras redes sociales como:</h2>
+  </main>
+  <footer>
+    <h3>Contactanos</h3>
+    <div class="redes-sociales">
+      <div class="redes-sociales__item">
+        <img src="{% static 'inicio/assets/img/facebook.png' %}" alt="Facebook">
+        <p><a href="/">FedPack</a></p>
+      </div>
+      <div class="redes-sociales__item">
+        <img src="{% static 'inicio/assets/img/instagram.png' %}" alt="Instagram">
+        <p><a href="/">Fed.Pack</a></p>
+      </div>
+      <div class="redes-sociales__item">
+        <img src="{% static 'inicio/assets/img/twitter.png' %}" alt="Twitter">
+        <p><a href="/">@FedPack</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="{% static 'inicio/main.js' %}"></script>
+</body>
+</html>

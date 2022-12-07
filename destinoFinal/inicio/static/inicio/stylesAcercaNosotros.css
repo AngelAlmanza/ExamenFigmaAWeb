@@ -1,0 +1,255 @@
+:root {
+  --color-principal: #982DCA;
+  --color-secundario: #DC5407;
+  --color-auxiliar-uno: #FFFFFF;
+  --color-auxiliar-dos: #000000;
+  --color-logo: #D9D9D9;
+  --tamanio-titulos: 32px;
+  --tamanio-subtitulos: 24px;
+  --tamanio-texto: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  max-width: 1200px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--color-principal);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+header .menu-hamburguesa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+header button span {
+  display: block;
+  width: 50px;
+  height: 6px;
+  margin: 4px auto;
+  border-radius: 4px;
+  background-color: var(--color-secundario);
+  transform-origin: 0px 100%;
+  transition: all 600ms;
+}
+
+.activemenu-hamburguesa__linea1 {
+  transform: rotate(45deg) translate(-2px, -1px);
+}
+
+.activemenu-hamburguesa__linea2 {
+  opacity: 0;
+  margin-left: -30px;
+}
+
+.activemenu-hamburguesa__linea3 {
+  transform: rotate(-45deg) translate(-2px, 4px);
+}
+
+header .contenedor-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: var(--color-logo);
+}
+
+header .contenedor-logo p {
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 black;
+}
+
+header .contenedor-logo p:nth-child(1) {
+  color: var(--color-principal);
+}
+
+header .contenedor-logo p:nth-child(2) {
+  color: var(--color-secundario);
+}
+
+.menu-header {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 15px 10px;
+  background-color: var(--color-principal);
+  transform: translateX(-100vw);
+  transform-origin: 0px 100%;
+  transition: all 600ms;
+}
+
+.menu-headeractive {
+  transform: translateX(0px);
+}
+
+.menu-header ul li {
+  list-style: none;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.menu-header ul li a {
+  text-decoration: none;
+  color: var(--color-auxiliar-uno);
+  font-size: var(--tamanio-titulos);
+}
+
+main {
+  width: 100%;
+  padding: 0px 20px;
+}
+
+h1, h2 {
+  font-size: var(--tamanio-titulos);
+  text-align: center;
+  margin: 20px auto;
+}
+
+main p {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.main-images {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-images div {
+  width: 40%;
+  max-width: 190px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.main-images div:nth-child(1) {
+  background-color: var(--color-principal);
+}
+
+.main-images div:nth-child(2) {
+  background-color: var(--color-secundario);
+}
+
+.main-images div img {
+  width: 100%;
+}
+
+footer {
+  padding: 20px 10px;
+}
+
+footer h3 {
+  font-size: var(--tamanio-subtitulos);
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.redes-sociales {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  place-items: center;
+}
+
+.redes-sociales__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 8px;
+}
+
+.redes-sociales__item img {
+  width: 40px;
+}
+
+.redes-sociales__item p {
+  margin-left: 8px;
+  font-size: var(--tamanio-texto);
+  font-weight: bold;
+}
+
+.redes-sociales__item p a {
+  text-decoration: none;
+  color: initial;
+}
+
+@media (min-width: 768px) {
+  header {
+    justify-content: space-between;
+    padding: 10px 30px;
+  }
+
+  footer h3 {
+    margin-left: 30px;
+  }
+
+  .redes-sociales {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    flex-flow: row-reverse;
+  }
+
+  header .menu-hamburguesa {
+    display: none;
+  }
+
+  .menu-header {
+    position: initial;
+    width: initial;
+    height: initial;
+    padding: 0;
+    transform: none;
+  }
+
+  .menu-header ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-header ul li {
+    margin-top: 0;
+  }
+
+  .menu-header ul li a {
+    font-size: var(--tamanio-texto);
+  }
+}

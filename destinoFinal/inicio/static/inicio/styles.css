@@ -1,0 +1,406 @@
+:root {
+  --color-principal: #982DCA;
+  --color-secundario: #DC5407;
+  --color-auxiliar-uno: #FFFFFF;
+  --color-auxiliar-dos: #000000;
+  --color-logo: #D9D9D9;
+  --tamanio-titulos: 32px;
+  --tamanio-subtitulos: 24px;
+  --tamanio-texto: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.inactive {
+  display: none !important;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  max-width: 1200px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--color-principal);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+header .menu-hamburguesa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  /* transition: all .5s ease; */
+}
+
+header button span {
+  display: block;
+  width: 50px;
+  height: 6px;
+  margin: 4px auto;
+  border-radius: 4px;
+  background-color: var(--color-secundario);
+  transform-origin: 0px 100%;
+  transition: all 600ms;
+}
+
+.activemenu-hamburguesa__linea1 {
+  transform: rotate(45deg) translate(-2px, -1px);
+}
+
+.activemenu-hamburguesa__linea2 {
+  opacity: 0;
+  margin-left: -30px;
+}
+
+.activemenu-hamburguesa__linea3 {
+  transform: rotate(-45deg) translate(-2px, 4px);
+}
+
+header .contenedor-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: var(--color-logo);
+}
+
+header .contenedor-logo p {
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 black;
+}
+
+header .contenedor-logo p:nth-child(1) {
+  color: var(--color-principal);
+}
+
+header .contenedor-logo p:nth-child(2) {
+  color: var(--color-secundario);
+}
+
+.menu-header {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 15px 10px;
+  background-color: var(--color-principal);
+  transform: translateX(-100vw);
+  transform-origin: 0px 100%;
+  transition: all 600ms;
+}
+
+.menu-headeractive {
+  transform: translateX(0px);
+}
+
+/* .menu-header ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+} */
+
+.menu-header ul li {
+  list-style: none;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.menu-header ul li a {
+  text-decoration: none;
+  color: var(--color-auxiliar-uno);
+  font-size: var(--tamanio-titulos);
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 200px;
+  padding: 30px 10px;
+  background-color: var(--color-principal);
+  /* box-shadow: inset 0px 4px 20px -4px black; */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.banner h1 {
+  font-size: var(--tamanio-titulos);
+  text-align: center;
+}
+
+.banner img {
+  width: 80%;
+}
+
+.descripcion {
+  padding: 20px 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.descripcion h2 {
+  font-size: var(--tamanio-subtitulos);
+  margin-bottom: 10px;
+}
+
+.descripcion p {
+  font-size: var(--tamanio-texto);
+}
+
+.promocion-home {
+  padding: 40px 10px;
+  background-color: var(--color-principal);
+  box-shadow: inset 0px 8px 4px -4px rgba(0, 0, 0, 0.25);
+}
+
+.promocion-home .promocion-home__contenedor-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.promocion-home h2 {
+  font-size: var(--tamanio-subtitulos);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.promocion-home__contenedor-img img[alt="Dron"] {
+  width: 90%;
+}
+
+.promocion-home__contenedor-img img[alt="Descuento 25%"] {
+  width: 80%;
+  margin-top: -65px;
+}
+
+.promocion-home button,
+.servicios-home button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 40px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  font-size: var(--tamanio-texto);
+  font-weight: bold;
+  color: var(--color-auxiliar-uno);
+  background-color: var(--color-secundario);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.servicios-home {
+  padding: 40px 20px;
+}
+
+.servicios-home h3 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: var(--tamanio-subtitulos);
+}
+
+.servicios-home__contenerdor-servicios {
+  margin-bottom: 40px;
+}
+
+.servicios-home__contenerdor-servicios ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.servicios-home__contenerdor-servicios ul li {
+  width: 120px;
+  height: 200px;
+  padding: 10px;
+  list-style: none;
+}
+
+.servicios-home__contenerdor-servicios ul .servicio-vacio {
+  width: 70px;
+  background-color: var(--color-principal);
+  filter: blur(2px);
+}
+
+.servicios-home__contenerdor-servicios ul .servicio-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background-color: var(--color-secundario);
+}
+
+.servicios-home__contenerdor-servicios img[alt="Dron"] {
+  width: 90%;
+}
+
+.servicios-home__contenerdor-servicios img[alt="Paquete"] {
+  width: 80%;
+  margin-top: -10px;
+}
+
+.servicio-item p {
+  margin-top: 20px;
+}
+
+.servicios-home button {
+  color: var(--color-auxiliar-dos);
+  background-color: var(--color-principal);
+}
+
+.elegirnos {
+  background-color: var(--color-principal);
+  padding: 20px 40px;
+  color: var(--color-auxiliar-uno);
+}
+
+.elegirnos h3 {
+  text-align: start;
+  margin-left: -20px;
+  margin-bottom: 20px;
+  font-size: var(--tamanio-subtitulos);
+  font-weight: bold;
+}
+
+.elegirnos ul li {
+  margin-bottom: 20px;
+  font-size: var(--tamanio-texto);
+}
+
+footer {
+  padding: 20px 10px;
+}
+
+footer h3 {
+  font-size: var(--tamanio-subtitulos);
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.redes-sociales {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  place-items: center;
+}
+
+.redes-sociales__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 8px;
+}
+
+.redes-sociales__item img {
+  width: 40px;
+}
+
+.redes-sociales__item p {
+  margin-left: 8px;
+  font-size: var(--tamanio-texto);
+  font-weight: bold;
+}
+
+.redes-sociales__item p a {
+  text-decoration: none;
+  color: initial;
+}
+
+@media (min-width: 768px) {
+  header {
+    justify-content: space-between;
+    padding: 10px 30px;
+  }
+
+  .banner img {
+    max-width: 500px;
+  }
+
+  .promocion-home__contenedor-img img[alt="Dron"] {
+    max-width: 500px;
+    margin-top: 10px;
+  }
+
+  .promocion-home__contenedor-img img[alt="Descuento 25%"] {
+    max-width: 500px;
+    margin-top: -125px;
+  }
+
+  .promocion-home button {
+    margin-top: -70px;
+  }
+
+  .servicios-home__contenerdor-servicios ul .servicio-vacio {
+    width: 120px;
+  }
+
+  .servicios-home__contenerdor-servicios ul .servicio-item {
+    width: 160px;
+    height: 240px;
+  }
+
+  footer h3 {
+    margin-left: 30px;
+  }
+
+  .redes-sociales {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    flex-flow: row-reverse;
+  }
+
+  header .menu-hamburguesa {
+    display: none;
+  }
+
+  .menu-header {
+    position: initial;
+    width: initial;
+    height: initial;
+    padding: 0;
+    transform: none;
+  }
+
+  .menu-header ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-header ul li {
+    margin-top: 0;
+  }
+
+  .menu-header ul li a {
+    font-size: var(--tamanio-texto);
+  }
+}
