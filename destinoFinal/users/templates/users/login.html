@@ -10,7 +10,26 @@
 </head>
 <body>
   <header>
-
+    <div class="menu-contenedor">
+      <button class="menu-hamburguesa">
+        <span class="menu-hamburguesa__linea1"></span>
+        <span class="menu-hamburguesa__linea2"></span>
+        <span class="menu-hamburguesa__linea3"></span>
+      </button>
+      <div class="menu-header">
+        <ul>
+          <li><a href="{% url 'inicio' %}">Inicio</a></li>
+          <li><a href="{% url 'servicios' %}">Servicios</a></li>
+          <li><a href="{% url 'contacto' %}">Contacto</a></li>
+          <li><a href="{% url 'acercadenosotros' %}">Acerca de nosotros</a></li>
+          <li><a href="{% url 'login' %}">Iniciar Sesion</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="contenedor-logo">
+      <p>Fed</p>
+      <p>Pack</p>
+    </div>
   </header>
   <main>
     <div class="container">
@@ -24,8 +43,10 @@
         {% endif %}
         {{ form.as_div }}
         <button class="Iniciar">Iniciar Sesion</button>
+        <a href="{% static 'register' %}" class="link-register">Crea una cuenta</a>
       </form>
     </div>
   </main>
+  <script src="{% static 'inicio/main.js' %}"></script>
 </body>
 </html>

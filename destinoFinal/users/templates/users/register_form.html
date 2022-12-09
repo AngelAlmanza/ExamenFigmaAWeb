@@ -9,8 +9,31 @@
   <link rel="stylesheet" href="{% static 'users/registerStyles.css' %}">
 </head>
 <body>
+  <header>
+    <div class="menu-contenedor">
+      <button class="menu-hamburguesa">
+        <span class="menu-hamburguesa__linea1"></span>
+        <span class="menu-hamburguesa__linea2"></span>
+        <span class="menu-hamburguesa__linea3"></span>
+      </button>
+      <div class="menu-header">
+        <ul>
+          <li><a href="{% url 'inicio' %}">Inicio</a></li>
+          <li><a href="{% url 'servicios' %}">Servicios</a></li>
+          <li><a href="{% url 'contacto' %}">Contacto</a></li>
+          <li><a href="{% url 'acercadenosotros' %}">Acerca de nosotros</a></li>
+          <li><a href="{% url 'login' %}">Iniciar Sesion</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="contenedor-logo">
+      <p>Fed</p>
+      <p>Pack</p>
+    </div>
+  </header>
   <main>
     <div class="container">
+      <h4 class="registro">Registrarse</h4>
       <form action="" method="POST">
         {% csrf_token %}
         {% if messages %}
@@ -19,9 +42,11 @@
           {% endfor %}
         {% endif %}
         {{ form.as_div }}
-        <button>Registrar</button>
+        <button class="boton">Registrar</button>
+        <a href="{% url 'login' %}" class="link-login">Iniciar Sesión</a>
       </form>
     </div>
   </main>
+  <script src="{% static 'inicio/main.js' %}"></script>
 </body>
 </html>

@@ -9,10 +9,10 @@
   --tamanio-texto: 16px;
 }
 
-* {
+*{
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
 }
 
 .inactive {
@@ -113,7 +113,7 @@ header .contenedor-logo p:nth-child(2) {
 
 .menu-headeractive {
   transform: translateX(0px);
-  max-width: 98.3%;
+  max-width: 100%;
   visibility: visible;
 }
 
@@ -127,59 +127,4 @@ header .contenedor-logo p:nth-child(2) {
   text-decoration: none;
   color: var(--color-auxiliar-uno);
   font-size: var(--tamanio-titulos);
-}
-
-.container{
-  width: 400px;
-  background: #982DCA;
-  padding: 30px;
-  margin: auto;
-  margin-top: 100px;
-  border-radius: 8px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.container h4{
- font-size: 22px;
- margin-bottom: 20px;
- color:white;
- text-align: center;
-}
-
-label[for="id_username"]{
-  
-  color:white;
-
-}
-label[for="id_password"]{
-  color:white;
-}
-
-.Iniciar{
-background: #DC5407;
-width: 100%;
-border: none;
-padding: 12px;
-margin: 16px 0;
-font-size: 20px;
-border-radius: 8px;
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-form div{
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-label input{
-display: block;
-}
-
-.link-register {
-  display: block;
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0 auto;
-  text-align: center;
-  color: #000000;
 }
